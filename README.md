@@ -93,19 +93,6 @@ python app.py
 
 ---
 
-## 📦 Folder Structure
-
-```
-📁 predictive_maintenance_cold_storage
-├── arduino_code/             # ESP32 Firmware
-├── ml_model/                 # Python scripts for training/testing ML
-├── flask_backend/            # API endpoints for ML prediction
-├── images/                   # Poster, hardware demo, UI screenshots
-└── README.md
-```
-
----
-
 ## 🧪 Features
 
 - ✅ Real-time sensor data acquisition
