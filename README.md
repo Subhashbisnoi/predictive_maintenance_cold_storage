@@ -17,7 +17,8 @@
 
 ---
 ## Working
-(./photo/Working.jpeg)
+
+![alt text](photo/Working.jpeg)
 
 ---
 ## 🛠️ Tech Stack
