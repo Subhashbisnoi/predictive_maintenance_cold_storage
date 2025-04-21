@@ -1,9 +1,5 @@
 
 # 🧊 Predictive Maintenance Cold Storage ❄️
-
-> An IoT & Machine Learning-based Risk Assessment System for Cold Storage Units  
-> 🔗 [GitHub Repository](https://github.com/Subhashbisnoi/predictive_maintenance_cold_storage)
-
 ---
 
 ## 📌 Project Overview
@@ -20,7 +16,10 @@
 - Enable predictive maintenance through trend analysis.
 
 ---
+## Working
+(./photo/Working.jpeg)
 
+---
 ## 🛠️ Tech Stack
 
 ### ⚙️ Hardware
