@@ -10,7 +10,7 @@
 
 ## 🎯 Objectives
 
-- Monitor critical cold storage parameters (temperature, humidity, gas concentration).
+- Monitor critical cold storage parameters (temperature, humidity).
 - Detect anomalies using machine learning models.
 - Provide real-time alerts to prevent spoilage.
 - Enable predictive maintenance through trend analysis.
@@ -26,7 +26,6 @@
 ### ⚙️ Hardware
 - **ESP32** – Microcontroller with Wi-Fi
 - **DHT11** – Temperature & Humidity sensor
-- **MQ135** – Gas sensor
 - **OLED Display** – For real-time sensor data
 - **Jumper wires, Breadboard, USB cable**
 
@@ -34,14 +33,13 @@
 - **Arduino IDE** – For firmware development
 - **Python (scikit-learn, pandas)** – For ML model training and inference
 - **Flask** – Backend for ML integration
-- **ThingSpeak / Blynk / Firebase** – (Optional) For real-time cloud dashboard
-- **GitHub Actions / Cron** – For scheduled model updates (optional)
+- **Thingspeak** - For cloud analytics
 
 ---
 
 ## 🧠 Machine Learning
 
-- **Model Used**: Logistic Regression / Random Forest (tuned)
+- **Model Used**: Random Forest 
 - **Target**: Binary classification of "Normal" vs "At Risk"
 - **Training Data**: Simulated + real sensor logs
 - **Features**: Temperature, Humidity, Gas Index, Time-of-Day
@@ -49,17 +47,14 @@
 
 ---
 
-## 📈 Dashboard & Alerts
-
-- Real-time sensor data displayed on OLED.
-- Optional mobile/cloud dashboard integration (e.g., Blynk/Firebase).
-- ML backend triggers **risk alerts** when thresholds are exceeded.
+## 📈 Dashboard
+![alt text](photo/Ui.jpeg)
 
 ---
 
 ## 📷 Prototype Snapshot
 
-![Hardware Setup](./images/hardware_demo.jpg)
+![alt text](photo/Prototype.jpeg)
 
 ---
 
