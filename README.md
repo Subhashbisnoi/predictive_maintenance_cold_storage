@@ -108,5 +108,4 @@ MIT License © 2025 [Subhash Bishnoi](https://www.linkedin.com/in/subhash-bishno
 
 - IIITDM Kancheepuram
 - IoT Lab & Faculty Mentors
-- Arduino + Adafruit Libraries
-- scikit-learn community
+
