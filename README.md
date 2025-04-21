@@ -1,64 +1,130 @@
-# **IoT & ML-Based Cold Storage Risk Assessment**
 
-## **Overview**
-This project focuses on leveraging IoT and machine learning (ML) technologies to assess and mitigate risks in the cold storage of dairy products. The system ensures real-time monitoring of environmental conditions, predictive maintenance, and anomaly detection to prevent spoilage and financial losses.
+# 🧊 Predictive Maintenance Cold Storage ❄️
 
-## **Problem Statement**
-Maintaining optimal storage conditions in dairy product warehouses (godowns) is crucial to prevent spoilage. Challenges include:
-- **Temperature fluctuations** due to cooling failures.
-- **Humidity variations** leading to mold growth.
-- **Equipment failures** disrupting storage conditions.
-- **Data inconsistency** from faulty sensors.
-- **Human error** in manual interventions.
+> An IoT & Machine Learning-based Risk Assessment System for Cold Storage Units  
+> 🔗 [GitHub Repository](https://github.com/Subhashbisnoi/predictive_maintenance_cold_storage)
 
-This project aims to implement a smart, automated solution that minimizes these risks.
+---
 
-## **Key Features & Solutions**
+## 📌 Project Overview
 
-### **1. IoT-Based Real-Time Monitoring**
-- **Implementation:** Deploy temperature, humidity, and power sensors inside storage units.
-- **Impact:** Ensures continuous tracking and early anomaly detection.
+**Cold storage failures** can lead to spoilage of dairy and perishable goods. Our system monitors environmental parameters using IoT sensors and leverages Machine Learning for **real-time anomaly detection and predictive maintenance**.
 
-### **2. Predictive Maintenance with ML**
-- **Implementation:** Train ML models (Random Forest, LSTMs, XGBoost) for early fault detection.
-- **Impact:** Reduces unexpected equipment failures and operational downtime.
+---
 
-### **3. Anomaly Detection Using AI**
-- **Implementation:** Time-series forecasting and anomaly detection models to identify deviations.
-- **Impact:** Enables swift corrective actions before critical failures occur.
+## 🎯 Objectives
 
-### **4. Automated Corrective Actions**
-- **Implementation:** IoT-enabled dynamic control of cooling and airflow based on sensor data.
-- **Impact:** Maintains uniform storage conditions, preventing localized spoilage.
+- Monitor critical cold storage parameters (temperature, humidity, gas concentration).
+- Detect anomalies using machine learning models.
+- Provide real-time alerts to prevent spoilage.
+- Enable predictive maintenance through trend analysis.
 
-### **5. Real-Time Alerts & Dashboard**
-- **Implementation:** Centralized notifications (SMS, email, mobile alerts) for detected anomalies.
-- **Impact:** Allows quick response to prevent losses.
+---
 
-### **6. Smart Tagging & Tracking of Goods**
-- **Implementation:** Use RFID and GPS tracking for dispatch and inventory management.
-- **Impact:** Reduces misplacement and enhances traceability.
+## 🛠️ Tech Stack
 
-## **Technology Stack**
-- **IoT Sensors:** LoRa, Zigbee, BLE, Wi-Fi-based temperature, humidity, and power sensors.
-- **Cloud & Data Storage:** AWS IoT, Firebase, PostgreSQL for real-time analytics.
-- **Machine Learning Frameworks:** TensorFlow, PyTorch, Scikit-learn for predictive maintenance.
-- **Dashboard & Alerts:** React, Flask/Django, Power BI, Grafana for monitoring and insights.
+### ⚙️ Hardware
+- **ESP32** – Microcontroller with Wi-Fi
+- **DHT11** – Temperature & Humidity sensor
+- **MQ135** – Gas sensor
+- **OLED Display** – For real-time sensor data
+- **Jumper wires, Breadboard, USB cable**
 
-## **Benefits & Unique Selling Proposition (USP)**
-✅ **Proactive Maintenance:** Predicts failures before they occur.  
-✅ **AI-Powered Anomaly Detection:** Detects even minor environmental deviations.  
-✅ **Cloud & Edge Computing Hybrid Model:** Faster local processing, cloud-based analytics.  
-✅ **Seamless Cold Storage Integration:** Compatible with existing refrigeration systems.  
-✅ **Real-Time Dashboard & Alerts:** Accessible via mobile, web, and messaging platforms.  
+### 💻 Software
+- **Arduino IDE** – For firmware development
+- **Python (scikit-learn, pandas)** – For ML model training and inference
+- **Flask** – Backend for ML integration
+- **ThingSpeak / Blynk / Firebase** – (Optional) For real-time cloud dashboard
+- **GitHub Actions / Cron** – For scheduled model updates (optional)
 
-## **Dataset**
-The dataset used for this project includes real-time IoT sensor data for environmental monitoring. Additional datasets include industry research papers and UIUC Propeller Data for reference.
+---
 
-## **Conclusion**
-By integrating IoT, AI, and cloud computing, this project revolutionizes cold storage management, ensuring:
-- **Lower operational costs**
-- **Minimized product spoilage**
-- **Improved efficiency and reliability**
+## 🧠 Machine Learning
 
-🚀 This system ensures dairy products remain fresh while reducing losses in the supply chain.
+- **Model Used**: Logistic Regression / Random Forest (tuned)
+- **Target**: Binary classification of "Normal" vs "At Risk"
+- **Training Data**: Simulated + real sensor logs
+- **Features**: Temperature, Humidity, Gas Index, Time-of-Day
+- **Output**: Risk score + alert flag
+
+---
+
+## 📈 Dashboard & Alerts
+
+- Real-time sensor data displayed on OLED.
+- Optional mobile/cloud dashboard integration (e.g., Blynk/Firebase).
+- ML backend triggers **risk alerts** when thresholds are exceeded.
+
+---
+
+## 📷 Prototype Snapshot
+
+![Hardware Setup](./images/hardware_demo.jpg)
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Subhashbisnoi/predictive_maintenance_cold_storage.git
+cd predictive_maintenance_cold_storage
+```
+
+### 2. Upload Arduino Code
+- Connect ESP32 to your system
+- Open `cold_storage_iot.ino` in **Arduino IDE**
+- Install necessary libraries: `DHT`, `Adafruit_Sensor`, `Wire`, `Adafruit_GFX`, `Adafruit_SSD1306`
+- Upload the code
+
+### 3. Train & Test ML Model
+```bash
+cd ml_model
+pip install -r requirements.txt
+python train_model.py
+python test_model.py
+```
+
+### 4. Start Flask Backend (Optional)
+```bash
+cd flask_backend
+python app.py
+```
+
+---
+
+## 📦 Folder Structure
+
+```
+📁 predictive_maintenance_cold_storage
+├── arduino_code/             # ESP32 Firmware
+├── ml_model/                 # Python scripts for training/testing ML
+├── flask_backend/            # API endpoints for ML prediction
+├── images/                   # Poster, hardware demo, UI screenshots
+└── README.md
+```
+
+---
+
+## 🧪 Features
+
+- ✅ Real-time sensor data acquisition
+- ✅ ML-based anomaly detection
+- ✅ On-device display of readings
+- ✅ Expandable backend with cloud integration
+- ✅ Risk alerts for preventive action
+
+---
+
+## 📜 License
+
+MIT License © 2025 [Subhash Bishnoi](https://www.linkedin.com/in/subhash-bishnoi-a068a42b1/)
+
+---
+
+## 🙌 Acknowledgements
+
+- IIITDM Kancheepuram
+- IoT Lab & Faculty Mentors
+- Arduino + Adafruit Libraries
+- scikit-learn community
